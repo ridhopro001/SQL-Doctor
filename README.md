@@ -1,29 +1,29 @@
 # SQL Doctor
 
-AI-powered SQL database analyzer using RAG (Retrieval-Augmented Generation). Upload your SQL schema files and get instant explanations, queries, and insights about your database structure.
+Penganalisis basis data SQL bertenaga AI menggunakan RAG (Retrieval-Augmented Generation). Unggah file skema SQL Anda dan dapatkan penjelasan instan, query, serta wawasan tentang struktur basis data Anda.
 
-## Features
+## Fitur
 
-- Analyze SQL database schemas using natural language
-- Get detailed explanations of tables, relationships, and queries
-- Generate SQL queries from plain English questions
-- Support for multiple database files
-- Interactive CLI interface
+- Menganalisis skema basis data SQL menggunakan bahasa alami
+- Mendapatkan penjelasan detail tentang tabel, relasi, dan query
+- Menghasilkan query SQL dari pertanyaan dalam bahasa Indonesia
+- Mendukung beberapa file basis data
+- Antarmuka CLI interaktif
 
-## Prerequisites
+## Prasyarat
 
 - Python 3.8+
-- MistralAI API key
+- API key MistralAI
 
-## Installation
+## Instalasi
 
-1. Clone the repository:
+1. Clone repository:
 ```bash
 git clone https://github.com/yourusername/sql-doctor.git
 cd sql-doctor
 ```
 
-2. Create virtual environment:
+2. Buat virtual environment:
 ```bash
 python -m venv venv
 # Windows
@@ -32,62 +32,62 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-3. Install dependencies:
+3. Instal dependensi:
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Create `.env` file:
+4. Buat file `.env`:
 ```env
 MISTRAL_API_KEY=your_api_key_here
 BASE_URL=your_base_url_here
 MISTRAL_MODEL=your_model_name_here
 ```
 
-5. Add SQL files to `db/` folder
+5. Tambahkan file SQL ke folder `db/`
 
-## Usage
+## Penggunaan
 
-1. Run the application:
+1. Jalankan aplikasi:
 ```bash
 python sql-doctor.py
 ```
 
-2. Select a database file from the list
+2. Pilih file basis data dari daftar
 
-3. Ask questions about your database:
+3. Ajukan pertanyaan tentang basis data Anda:
 ```
 Apa saja tabel yang ada di database ini?
 Bagaimana cara membuat query untuk mengambil semua user?
 Jelaskan hubungan antara tabel orders dan customers
 ```
 
-4. Type `/q`, `/exit`, or `/quit` to exit
+4. Ketik `/q`, `/exit`, atau `/quit` untuk keluar
 
-## Project Structure
+## Struktur Proyek
 
 ```
 sql-doctor/
-├── db/                 # SQL schema files
+├── db/                 # File skema SQL
 ├── venv/               # Virtual environment
-├── .env                # Environment variables (not committed)
-├── requirements.txt    # Python dependencies
-└── sql-doctor.py       # Main application
+├── .env                # Variabel environment (tidak di-commit)
+├── requirements.txt    # Dependensi Python
+└── sql-doctor.py       # Aplikasi utama
 ```
 
-## How It Works
+## Cara Kerja
 
-1. **Document Loading**: SQL files are loaded and split into chunks
-2. **Embeddings**: Text chunks are converted to vector embeddings using MistralAI
-3. **Vector Store**: Embeddings are stored in ChromaDB for fast retrieval
-4. **RAG Pipeline**: User questions retrieve relevant context and generate responses
+1. **Pemuatan Dokumen**: File SQL dimuat dan dibagi menjadi bagian-bagian kecil
+2. **Embeddings**: Teks yang sudah dipecah dikonversi menjadi vektor embeddings menggunakan MistralAI
+3. **Vektor Penyimpanan**: Embeddings disimpan di ChromaDB untuk pengambilan cepat
+4. **Pipa RAG**: Pertanyaan pengguna mengambil konteks relevan dan menghasilkan respons
 
-## Technologies
+## Teknologi
 
-- [LangChain](https://github.com/langchain-ai/langchain) - LLM framework
-- [ChromaDB](https://github.com/chroma-core/chroma) - Vector database
-- [MistralAI](https://mistral.ai/) - LLM and embeddings
+- [LangChain](https://github.com/langchain-ai/langchain) - Framework LLM
+- [ChromaDB](https://github.com/chroma-core/chroma) - Basis data vektor
+- [MistralAI](https://mistral.ai/) - LLM dan embeddings
 
-## License
+## Lisensi
 
-MIT"# SQL-Doctor" 
+MIT
